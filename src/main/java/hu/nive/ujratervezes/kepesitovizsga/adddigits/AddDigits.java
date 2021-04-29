@@ -7,6 +7,10 @@ public class AddDigits {
             return -1;
         }
         char[] letters = input.toCharArray();
+        return summarizer(letters);
+    }
+
+    private int summarizer(char[] letters) {
         int sum = 0;
         for (char item: letters) {
             if (Character.isDigit(item)) {
