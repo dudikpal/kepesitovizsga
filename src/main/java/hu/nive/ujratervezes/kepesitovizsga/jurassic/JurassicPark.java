@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class JurassicPark {
@@ -27,6 +29,7 @@ public class JurassicPark {
             while (rs.next()) {
                 overPopulated.add(rs.getString("breed"));
             }
+            Collections.sort(overPopulated);
             return overPopulated;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
